@@ -16,8 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
-@Configuration//환경설정 파일
-@ImportResource("test7/applicatiationContext7.xml")//xml 파일 가져옴
+
 public class googlecheck_Simple {
 	ArrayList<Object> google(){
 		
@@ -79,6 +78,10 @@ public class googlecheck_Simple {
 				driver.findElement(By.xpath(
 						"//*[@id=\"yDmH0d\"]/c-wiz/div/div/div[13]/div[3]/div/div[1]/div[4]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/button/span"))
 						.click();
+				
+				Thread.sleep(2000);
+				
+				driver.findElement(By.xpath("//*[@id=\"ow3\"]/div[1]/div/div[13]/div[3]/div[2]/div[1]/div[1]/div/div[2]/div/div/div[1]/span/button")).click();
 
 				// System.out.println("-----------------------접속중인
 				// 명단-------------------------");
@@ -337,9 +340,4 @@ public class googlecheck_Simple {
 			
 		}
 	
-	public void result() {
-		ArrayList<Object> trans = new ArrayList<Object>();
-		trans.add(resultOffline);
-		
-	}
 }

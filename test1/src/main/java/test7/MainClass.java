@@ -11,10 +11,10 @@ import test5.Student;
 
 public class MainClass {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		googlecheck_Simple go =new googlecheck_Simple();
-		//go.check();
-		System.out.println(go.resultCamoff);
+		go.check();
+
 		
 	
 	//°´Ã¼ »ý¼º

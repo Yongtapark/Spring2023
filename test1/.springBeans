@@ -13,6 +13,12 @@
 		<config>src/main/java/test6/applicationContext6.xml</config>
 		<config>src/main/java/test4_1/applicationContext4_1.xml</config>
 		<config>src/main/java/test7/applicatiationContext7.xml</config>
+		<config>src/main/java/test11/application11_run.xml</config>
+		<config>src/main/java/test11/application11_test.xml</config>
+		<config>src/main/java/test13Aop/contextAnnot.xml</config>
+		<config>src/main/java/test14Aop/application14.xml</config>
+		<config>src/main/java/test14Aop_1/application14_1.xml</config>
+		<config>src/main/java/test15Aop/applicationContext15.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
