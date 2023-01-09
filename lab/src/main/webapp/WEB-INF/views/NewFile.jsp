@@ -1,10 +1,10 @@
+<%@page import="dvided.divided.googlecheck_Simple_Origin"%>
 <%@page import="java.io.PrintWriter"%>
-<%@page import="io.opentelemetry.exporter.logging.SystemOutLogRecordExporter"%>
-<%@page import="Lab.googlecheck_Simple_window_open"%>
+<%@page import="io.opentelemetry.exporter.logging.SystemOutLogRecordExporter"%>>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="google.*" %>
+
 <!DOCTYPE html>
 <html>
 <head>

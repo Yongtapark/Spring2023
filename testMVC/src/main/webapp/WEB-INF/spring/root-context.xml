@@ -4,5 +4,26 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+			<!-- db연동 -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+	<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+	<property name="username" value="scott"/>
+	<property name="password" value="tiger"/>
+	</bean>
+	
+	<!-- jdbcTamplate 설정 -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+	<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!--  Template를 적용 -->
+	<bean id="empDAO" class="com.sample.mvc.jdbc.EmpDAOImpl">
+	<property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</bean>
+	
+	<!-- 처리 -->
+	<bean id="empController" class="com.sample.mvc.jdbc.EmpControllerImpl">
+	<property name="empDAO" ref="empDAO"/>
+	</bean>
 </beans>

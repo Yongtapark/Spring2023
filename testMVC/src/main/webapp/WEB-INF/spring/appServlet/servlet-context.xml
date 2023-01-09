@@ -36,8 +36,30 @@
 	</beans:bean>
 	<beans:bean name="/process" class="com.sample.mvc.Process"></beans:bean>
 	
+	<!-- com.sample.mvs.jdbc 패키지 설정하기 -->
+	<!-- Template을 적용시키기 DAO -->
+	<beans:bean id="empDAO" class="com.sample.mvc.jdbc.EmpDAOImpl">
+	<beans:property name="jdbcTemplate" ref="jdbcTemplate"/>
+	</beans:bean>
+	<!-- insert, delete, update, select -->
+	<beans:bean id="/empInsert" class="com.sample.mvc.jdbc.EmpInsert">
+		<beans:property name="empDAO" ref="empDAO"/>
+	</beans:bean>
+	<beans:bean name="/empInsertAction" class="com.sample.mvc.jdbc.EmpInsertAction">
+	<beans:property name="empDAO" ref="empDAO"/>
+	</beans:bean>
 	
+	<beans:bean name="/empList" class="com.sample.mvc.jdbc.EmpListAction">
+	<beans:property name="empDAO" ref="empDAO"/>
+	</beans:bean>
 	
+	<beans:bean name="/empUpdate" class="com.sample.mvc.jdbc.EmpUpdate">
+	<beans:property name="empDAO" ref="empDAO"/>
+	</beans:bean>
+	
+	<beans:bean name="/empUpdateAction" class="com.sample.mvc.jdbc.EmpUpdateAction">
+	<beans:property name="empDAO" ref="empDAO"/>
+	</beans:bean>
 	
 	
 </beans:beans>

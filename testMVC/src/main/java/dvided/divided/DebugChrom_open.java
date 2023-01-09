@@ -1,4 +1,4 @@
-package com.sample.mvc;
+package dvided.divided;
 
 
 import java.io.IOException;
